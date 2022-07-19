@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/goldenshoe/static/css/main.855e3223.css",
-    "main.js": "/goldenshoe/static/js/main.098ab0eb.js",
-    "static/css/274.feceac31.chunk.css": "/goldenshoe/static/css/274.feceac31.chunk.css",
+    "main.js": "/goldenshoe/static/js/main.89d2984e.js",
+    "static/css/274.42c4772b.chunk.css": "/goldenshoe/static/css/274.42c4772b.chunk.css",
     "static/js/274.e59754b8.chunk.js": "/goldenshoe/static/js/274.e59754b8.chunk.js",
     "static/css/479.f27a13b1.chunk.css": "/goldenshoe/static/css/479.f27a13b1.chunk.css",
     "static/js/479.1b1f4ba2.chunk.js": "/goldenshoe/static/js/479.1b1f4ba2.chunk.js",
@@ -29,8 +29,8 @@
     "static/media/BlackConv-sideL.jpeg": "/goldenshoe/static/media/BlackConv-sideL.a5d8cabee2ba12e3a45d.jpeg",
     "index.html": "/goldenshoe/index.html",
     "main.855e3223.css.map": "/goldenshoe/static/css/main.855e3223.css.map",
-    "main.098ab0eb.js.map": "/goldenshoe/static/js/main.098ab0eb.js.map",
-    "274.feceac31.chunk.css.map": "/goldenshoe/static/css/274.feceac31.chunk.css.map",
+    "main.89d2984e.js.map": "/goldenshoe/static/js/main.89d2984e.js.map",
+    "274.42c4772b.chunk.css.map": "/goldenshoe/static/css/274.42c4772b.chunk.css.map",
     "274.e59754b8.chunk.js.map": "/goldenshoe/static/js/274.e59754b8.chunk.js.map",
     "479.f27a13b1.chunk.css.map": "/goldenshoe/static/css/479.f27a13b1.chunk.css.map",
     "479.1b1f4ba2.chunk.js.map": "/goldenshoe/static/js/479.1b1f4ba2.chunk.js.map",
@@ -51,6 +51,6 @@
   },
   "entrypoints": [
     "static/css/main.855e3223.css",
-    "static/js/main.098ab0eb.js"
+    "static/js/main.89d2984e.js"
   ]
 }
