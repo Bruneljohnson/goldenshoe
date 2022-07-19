@@ -147,7 +147,7 @@ const OrderItem = () => {
         {detail?.shoes.map((shoe) => (
           <li className={classes.shoeslist} key={shoe._id}>
             <figure>
-              <img src={shoe?.shoe.image[0]} alt="Shoe" />
+              <img src={shoe?.shoe?.image[0]} alt="Shoe" />
             </figure>
             <div className={classes["shoeslist_deets"]}>
               <h2>{shoe?.shoe?.title.split("- ")[0]}</h2>

@@ -34,8 +34,6 @@ const Cart = () => {
     };
   });
 
-  console.log(fixedOrder);
-
   const startCheckoutHandler = () => {
     const requestConfig = {
       url: "https://goldenshoe-api.herokuapp.com/api/v1/order/checkout-session",

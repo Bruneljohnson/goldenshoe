@@ -21,6 +21,7 @@ const CartSlice = createSlice({
 
       if (!exisitingItem) {
         state.items.push({
+          key: Math.random(),
           id: newItem._id,
           _id: newItem._id,
           quantity: newItem.quantity,
