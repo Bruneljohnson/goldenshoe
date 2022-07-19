@@ -62,7 +62,7 @@ const Cart = () => {
           Order
         </button>
       )}
-      {isAuth && (
+      {isAuth && items.length > 0 && (
         <button className="custom-button" onClick={startCheckoutHandler}>
           Order
         </button>
