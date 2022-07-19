@@ -11,7 +11,7 @@ const ProductItem = ({ shoe }) => {
   };
 
   return (
-    <div className={classes.container}>
+    <div className={classes.container} onClick={goToItemHandler}>
       <div>
         <figure className={classes.imgContainer}>
           <img src={shoe?.image[0]} alt="shoe" />

@@ -1,7 +1,7 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { Navigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import LoadingSpinner from "./components/Ui/LoadingSpinner";
 import Layout from "./components/Layout/Layout";
 import LoginPage from "./components/Pages/LoginPage";
@@ -22,9 +22,17 @@ import Mens from "./components/Pages/Mens";
 import Womens from "./components/Pages/Womens";
 import Kids from "./components/Pages/Kids";
 import ProductPage from "./components/Pages/ProductPage";
+import { storeCart } from "./store/slices/cartSlice/CartActionCreators";
 
 function App() {
+  const dispatch = useDispatch();
   const isAuth = useSelector((state) => state.auth.isAuth);
+  const cart = useSelector((state) => state.cart.items);
+
+  useEffect(() => {
+    dispatch(storeCart(cart));
+  }, [dispatch, cart]);
+
   return (
     <Layout>
       <Suspense fallback={<LoadingSpinner />}>

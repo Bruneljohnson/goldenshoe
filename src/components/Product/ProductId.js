@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { TbMinus, TbPlus } from "react-icons/tb";
@@ -15,6 +15,10 @@ const ProductId = () => {
   const shoes = useSelector((state) => state.data.shoes);
 
   const shoe = shoes?.find((shoe) => shoe._id === params.id);
+
+  useEffect(() => {
+    setAmount(0);
+  }, [selected]);
 
   const optionSelectHandler = (event) => {
     event.preventDefault();
@@ -108,6 +112,7 @@ const ProductId = () => {
               type="button"
               className="custom-button"
               onClick={addToCartHandler}
+              disabled={amount === 0}
             >
               Add
             </button>

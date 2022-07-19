@@ -22,11 +22,25 @@ const Cart = () => {
     navigate("/login-signup", { replace: true });
   };
 
+  const fixedOrder = items.map((item) => {
+    return {
+      id: item._id,
+      quantity: item.quantity,
+      price: item.price,
+      title: item.title.split("- ")[0],
+      size: item.size,
+      description: item.description,
+      image: item.image[0],
+    };
+  });
+
+  console.log(fixedOrder);
+
   const startCheckoutHandler = () => {
     const requestConfig = {
       url: "https://goldenshoe-api.herokuapp.com/api/v1/order/checkout-session",
       method: "POST",
-      body: { shoes: items },
+      body: { shoes: fixedOrder },
       headers: {
         Authorization: `Bearer ${token}`,
         "content-Type": "application/json",

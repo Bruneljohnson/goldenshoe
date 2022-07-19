@@ -40,6 +40,25 @@ const Shop = ({ title }) => {
   }, [sendRequest, dispatch]);
 
   // Filter API
+
+  // Clear Filter when Show Filter === false
+  useEffect(() => {
+    if (showFilter === false) {
+      const requestConfig = {
+        url: "https://goldenshoe-api.herokuapp.com/api/v1/shoes",
+        headers: { "content-Type": "application/json" },
+      };
+      const dataGrabber = (data) => {
+        const shoes = data.data;
+
+        dispatch(storeData(shoes));
+        dispatch(DataSliceActions.storeShoes(shoes));
+      };
+
+      sendRequest(requestConfig, dataGrabber);
+    }
+  }, [showFilter, sendRequest, dispatch]);
+
   const filterHandler = (event) => {
     event.preventDefault();
 

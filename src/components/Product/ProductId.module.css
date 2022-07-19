@@ -115,10 +115,19 @@
 }
 
 .addContainer button {
-  background: var(--color-greybase);
+  background: #68a34b;
 }
 .addContainer button:hover {
   background: var(--color-red);
+}
+
+.addContainer button:disabled,
+.addContainer button:disabled:hover,
+.addContainer button:disabled:active {
+  cursor: not-allowed;
+  background-color: var(--color-greybase);
+  color: #3f3f3f;
+  border-color: var(--color-greybase);
 }
 
 .amountContainer {

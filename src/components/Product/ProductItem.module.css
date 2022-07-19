@@ -4,6 +4,7 @@
   margin-top: 4rem;
   background: var(--color-greyfooter);
   padding: 1rem;
+  cursor: pointer;
 }
 .imgContainer img:hover {
   transform: scale(1.1);

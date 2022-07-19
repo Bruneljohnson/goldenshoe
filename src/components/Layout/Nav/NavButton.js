@@ -33,7 +33,7 @@ const NavButton = () => {
 
   return (
     <button className={btnClasses} onClick={showCartHandler}>
-      <AiOutlineShoppingCart fontSize={25} className={classes.icon} />
+      <AiOutlineShoppingCart fontSize={30} className={classes.icon} />
       <span className={classes.badge}>{numberOfCartItems}</span>
     </button>
   );
