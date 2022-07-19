@@ -10,19 +10,19 @@ import ResetPasswordPage from "./components/Pages/ResetPasswordPage";
 import VerifyEmailPage from "./components/Pages/VerifyEmailPage";
 import NotFoundPage from "./components/Pages/NotFoundPage";
 import CheckoutSuccess from "./components/Pages/CheckoutSuccess";
+import { storeCart } from "./store/slices/cartSlice/CartActionCreators";
 
 import "./App.css";
 
 //Suspense Lazy-Loading
-import HomePage from "./components/Pages/HomePage";
-import CartPage from "./components/Pages/CartPage";
-import ProfilePage from "./components/Pages/ProfilePage";
-import OrderPage from "./components/Pages/OrderPage";
-import Mens from "./components/Pages/Mens";
-import Womens from "./components/Pages/Womens";
-import Kids from "./components/Pages/Kids";
-import ProductPage from "./components/Pages/ProductPage";
-import { storeCart } from "./store/slices/cartSlice/CartActionCreators";
+const HomePage = React.lazy(() => import("./components/Pages/HomePage"));
+const CartPage = React.lazy(() => import("./components/Pages/CartPage"));
+const ProfilePage = React.lazy(() => import("./components/Pages/ProfilePage"));
+const OrderPage = React.lazy(() => import("./components/Pages/OrderPage"));
+const Mens = React.lazy(() => import("./components/Pages/Mens"));
+const Womens = React.lazy(() => import("./components/Pages/Womens"));
+const Kids = React.lazy(() => import("./components/Pages/Kids"));
+const ProductPage = React.lazy(() => import("./components/Pages/ProductPage"));
 
 function App() {
   const dispatch = useDispatch();
