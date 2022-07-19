@@ -1,0 +1,66 @@
+.logout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout p {
+  display: none;
+}
+
+.logout-button {
+  background: transparent;
+  color: var(--color-black);
+  display: flex;
+  margin-left: 0;
+
+  font-family: var(--font-base);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  line-height: 28px;
+  font-size: 1.8rem;
+  text-align: center;
+
+  backdrop-filter: blur(4px);
+
+  transition: linear 1s ease;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.logout-button:hover {
+  color: var(--color-red);
+}
+
+.logout-button:focus {
+  outline: none;
+}
+
+.li span,
+.li a:link,
+.li a:visited {
+  font-size: 1.8rem;
+  transition: 0.5s ease;
+  text-decoration: none !important;
+  transition: linear 1s ease;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+.li a:hover,
+.active {
+  border-bottom: 5px solid var(--color-yellow);
+}
+
+@media screen and (max-width: 650px) {
+  .logout {
+    flex-direction: column;
+  }
+  .logout div {
+    display: none;
+  }
+  .logout p {
+    display: block;
+  }
+}

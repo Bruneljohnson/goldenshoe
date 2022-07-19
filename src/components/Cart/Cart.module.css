@@ -1,0 +1,37 @@
+.Cart {
+  color: var(--color-black);
+}
+.empty {
+  height: 100vh;
+}
+
+.empty h1 {
+  color: var(--color-black);
+  text-align: center;
+}
+
+.total {
+  margin: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1150px) {
+  .total {
+    margin: 3rem 01rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .total {
+    font-size: 2rem;
+  }
+}

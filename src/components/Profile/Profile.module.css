@@ -1,0 +1,166 @@
+.profile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 8rem auto;
+  color: var(--color-black);
+  font-size: 1.6rem;
+}
+
+.userProfile {
+  background: var(--color-greyfooter);
+  padding: 6rem 3rem;
+  border-radius: 0.5rem;
+  width: 75%;
+  height: 75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.userProfile figure img {
+  border-radius: 50%;
+}
+
+.userProfile h2 {
+  text-transform: capitalize;
+  font-size: 2.5rem;
+}
+
+.userProfile_deets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.8rem;
+}
+
+.userProfile_deets li {
+  margin-left: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.userProfile_deets li > strong {
+  color: var(--color-red);
+}
+
+.userProfile button {
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: none;
+  background: transparent;
+  margin-top: 2rem;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.userProfile button:focus {
+  outline: none;
+}
+
+.userProfile button:hover {
+  color: var(--color-red);
+}
+
+/* ORDERS */
+
+.orders h1 {
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+/* EDIT PROFILE */
+.editProfile {
+  width: 65%;
+}
+
+.editProfile h1 {
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+}
+/* PAGINATION */
+
+.paginationContainer {
+  margin: 2rem auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-base);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color-greybase);
+  padding: 1rem;
+}
+
+.paginationContainer a {
+  cursor: pointer;
+}
+.paginationContainer a:hover {
+  color: var(--color-red);
+}
+
+.activePage {
+  color: var(--color-red);
+}
+.nextPage,
+.prevPage {
+  border: 2px solid var(--color-red);
+  border-radius: 50%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nextPage:hover,
+.prevPage:hover {
+  background: var(--color-red);
+  fill: var(--color-white);
+}
+.react-icon {
+  fill: var(--color-yellow);
+}
+
+@media screen and (max-width: 1150px) {
+  .paginationContainer {
+    width: 100%;
+  }
+  .profile {
+    grid-template-columns: 1fr;
+  }
+  .userProfile {
+    grid-row: 1/1;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .userProfile {
+    width: 95%;
+  }
+  .editProfile {
+    width: 95%;
+  }
+  .paginationContainer {
+    width: 95%;
+  }
+  .userProfile_deets {
+    gap: 1rem;
+  }
+  .userProfile_deets li {
+    flex-direction: column;
+  }
+  .userProfile_deets li > strong,
+  .userProfile_deets li > span {
+    margin-left: 0;
+  }
+  .orders h1,
+  .editProfile h1 {
+    font-size: 2rem;
+  }
+}

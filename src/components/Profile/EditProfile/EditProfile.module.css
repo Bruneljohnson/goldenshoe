@@ -1,0 +1,93 @@
+.account {
+  margin-left: 0;
+  width: 140%;
+}
+
+.account h2 {
+  text-transform: capitalize;
+  font-size: 2rem;
+  color: var(--color-red);
+}
+
+.user-view__content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 5rem 0;
+}
+
+/* Form */
+
+.form__input {
+  display: block;
+  font-family: inherit;
+  font-size: 1.5rem;
+  color: var(--color-black);
+  padding: 1.25rem 1.75rem;
+  border: none;
+  width: 100%;
+  background-color: #fff;
+  background-color: #f2f2f2;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* Pseudo element (a visible thing that isn't really in the DOM).
+      Also needs -ms- */
+}
+.form__input:focus {
+  outline: none;
+  border-bottom: 3px solid var(--color-red);
+}
+.form__input:focus:invalid {
+  border-bottom: 3px solid var(--color-yellow);
+}
+.form__input::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+.form__group:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.form__label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color-red);
+}
+
+.form__group button:disabled,
+.form__group button:disabled:hover,
+.form__group button:disabled:active {
+  cursor: not-allowed;
+  background-color: var(--color-greybase);
+  color: #3f3f3f;
+  border-color: var(--color-greybase);
+}
+
+@media screen and (min-width: 2001px) {
+}
+
+@media screen and (max-width: 2000px) {
+}
+
+@media screen and (max-width: 1150px) {
+  .account {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .account h2 {
+    font-size: 2rem;
+    color: var(--color-red);
+  }
+}
+@media screen and (max-width: 450px) {
+}

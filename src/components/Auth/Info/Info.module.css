@@ -1,0 +1,96 @@
+.notfound {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: 8rem auto 40rem auto;
+}
+
+.notfound-info_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.notfound-info_header p {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-black);
+}
+
+.notfound-info_header h2 {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 3rem;
+  color: var(--color-red);
+  text-transform: uppercase;
+}
+
+.notfound-info > p {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: var(--color-black);
+}
+
+.custom-button,
+.custom-altbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  width: 35%;
+  font-weight: 400;
+  font-size: 1.3rem;
+  padding: 1rem 1.5rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin: 0 auto;
+  border: none;
+  background: var(--color-greyfooter);
+  color: var(--color-black);
+}
+
+.custom-button:hover {
+  background: var(--color-red);
+  color: var(--color-white);
+  border: none;
+}
+.custom-altbutton:hover {
+  background: var(--color-yellow);
+  color: var(--color-black);
+  border: none;
+}
+
+.custom-button:focus,
+.custom-altbutton:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 1150px) {
+}
+@media screen and (max-width: 375px) {
+  .notfound-info_header p {
+    font-size: 1.8rem;
+  }
+
+  .notfound-info_header h2 {
+    font-size: 3rem;
+  }
+
+  .notfound-info > p {
+    font-size: 1.2rem;
+    color: var(--color-black);
+  }
+
+  .custom-button,
+  .custom-altbutton {
+    width: 40%;
+  }
+}

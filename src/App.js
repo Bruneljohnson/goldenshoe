@@ -1,58 +1,103 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React, { Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import LoadingSpinner from "./components/Ui/LoadingSpinner";
+import Layout from "./components/Layout/Layout";
+import LoginPage from "./components/Pages/LoginPage";
+import ForgotPasswordPage from "./components/Pages/ForgotPasswordPage";
+import ResetPasswordPage from "./components/Pages/ResetPasswordPage";
+import VerifyEmailPage from "./components/Pages/VerifyEmailPage";
+import NotFoundPage from "./components/Pages/NotFoundPage";
+import CheckoutSuccess from "./components/Pages/CheckoutSuccess";
+
+import "./App.css";
+
+//Suspense Lazy-Loading
+import HomePage from "./components/Pages/HomePage";
+import CartPage from "./components/Pages/CartPage";
+import ProfilePage from "./components/Pages/ProfilePage";
+import OrderPage from "./components/Pages/OrderPage";
+import Mens from "./components/Pages/Mens";
+import Womens from "./components/Pages/Womens";
+import Kids from "./components/Pages/Kids";
+import ProductPage from "./components/Pages/ProductPage";
 
 function App() {
+  const isAuth = useSelector((state) => state.auth.isAuth);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
-    </div>
+    <Layout>
+      <Suspense fallback={<LoadingSpinner />}>
+        <Routes>
+          <Route path={"/"} element={<HomePage />} />
+          <Route path={"/mens"} element={<Mens />} />
+          <Route path={"/womens"} element={<Womens />} />
+          <Route path={"/kids"} element={<Kids />} />
+          <Route
+            path="/user/:id"
+            element={
+              isAuth ? (
+                <ProfilePage />
+              ) : (
+                <Navigate to="/login-signup" replace={true} />
+              )
+            }
+          />
+          <Route
+            path="/order/:id"
+            element={
+              isAuth ? (
+                <OrderPage />
+              ) : (
+                <Navigate to="/login-signup" replace={true} />
+              )
+            }
+          />
+          <Route path="/product/:id" element={<ProductPage />} />
+          <Route
+            path="/login-signup"
+            element={
+              !isAuth ? <LoginPage /> : <Navigate to="/" replace={true} />
+            }
+          />
+
+          <Route
+            path="/forgotpassword"
+            element={
+              !isAuth ? (
+                <ForgotPasswordPage />
+              ) : (
+                <Navigate to="/" replace={true} />
+              )
+            }
+          />
+
+          <Route
+            path="/resetpassword/:token"
+            element={
+              !isAuth ? (
+                <ResetPasswordPage />
+              ) : (
+                <Navigate to="/" replace={true} />
+              )
+            }
+          />
+
+          <Route
+            path="/verifyemail/:token"
+            element={
+              !isAuth ? <VerifyEmailPage /> : <Navigate to="/" replace={true} />
+            }
+          />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/checkout-success" element={<CheckoutSuccess />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
+    </Layout>
   );
 }
 
 export default App;
+
+// Authorization: `Bearer ${token}`,

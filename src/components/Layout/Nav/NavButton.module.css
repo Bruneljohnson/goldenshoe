@@ -1,0 +1,68 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  border: none;
+  background: transparent;
+  padding: 1rem 1.5rem;
+  position: relative;
+  font-family: var(--font-alt);
+  color: var(--color-yellow);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  line-height: 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.icon {
+  color: var(--color-black);
+}
+
+.badge {
+  background-color: var(--color-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  position: absolute;
+  font-weight: 700;
+  top: 0;
+  left: 2.4rem;
+  transform: translate(40%, 10%);
+  z-index: 4;
+  border-radius: 50%;
+  padding: 1rem 0.6rem;
+  letter-spacing: 0;
+  line-height: 0;
+}
+
+.button:hover .badge,
+.button:active .badge {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+.bump {
+  animation: bump 300ms ease-out;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

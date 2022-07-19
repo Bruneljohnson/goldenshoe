@@ -1,0 +1,231 @@
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 30rem;
+  border-bottom: 2px solid var(--color-);
+  background: var(--color-greyfooter);
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+}
+
+.imgContainer {
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
+}
+.imgContainer img {
+  width: 35%;
+  border-radius: 0.5rem;
+}
+.imgContainer img:hover {
+  transform: scale(1.1);
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.infoContainer h2 {
+  margin-bottom: 2rem;
+  color: var(--color-black);
+  font-family: var(--font-base);
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.summary {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.price,
+.subTotal {
+  margin: 0;
+  font-size: 2rem;
+  margin-right: 2rem;
+  font-weight: 700;
+  font-family: var(--font-alt);
+  color: var(--color-black);
+}
+
+.subTotal {
+  text-transform: uppercase;
+  color: var(--color-red);
+  font-size: 2.5rem;
+  border-bottom: 1px solid var(--color-greybase);
+}
+.size {
+  font-size: 2.5rem;
+  color: var(--color-black);
+  font-weight: 700;
+  margin-right: 2rem;
+}
+
+.amount {
+  font-weight: 700;
+  border: 1px solid var(--color-red);
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-family: var(--font-alt);
+  color: var(--color-black);
+  margin-right: 2rem;
+}
+
+.actions {
+  margin-top: -1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-item button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-alt);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-black);
+  border: none;
+  outline: none;
+  width: 5rem;
+  padding: 1rem 1rem;
+  text-align: center;
+  border-radius: 2px;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 1rem;
+  margin: 0.25rem;
+}
+
+.cart-item button:hover,
+.cart-item button:active {
+  color: var(--color-red);
+}
+
+.actions .button--alt {
+  color: var(--color-black);
+}
+.actions .button--alt:hover,
+.actions .button--alt:active {
+  color: var(--color-yellow);
+}
+
+@media screen and (min-width: 2000px) {
+  .cart-item button {
+    font-size: 2.5rem;
+    line-height: 30px;
+  }
+  .cart-item h2 {
+    font-size: 3.5rem;
+  }
+  .price {
+    font-size: 2.5rem;
+  }
+  .amount {
+    padding: 0.5rem 1rem;
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .cart-item button {
+    font-size: 2rem;
+    line-height: 30px;
+  }
+  .cart-item h2 {
+    font-size: 3rem;
+  }
+  .price,
+  .size {
+    font-size: 2rem;
+  }
+  .amount {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+  }
+  .imgContainer img {
+    width: 50%;
+    border-radius: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .imgContainer img {
+    width: 60%;
+    border-radius: 0.5rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  .imgContainer img {
+    width: 75%;
+    border-radius: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .cart-item button {
+    font-size: 2rem;
+    line-height: 30px;
+  }
+  .cart-item h2 {
+    font-size: 2.5rem;
+  }
+  .price {
+    font-size: 1.8rem;
+  }
+  .amount {
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+  }
+  .cart-item {
+    grid-template-columns: 1fr;
+    height: 100%;
+    gap: 3rem;
+    align-items: center;
+  }
+  .imgContainer img {
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  .subTotal {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .actions {
+    flex-direction: column;
+  }
+  .summary {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .cart-item button {
+    font-size: 1.5rem;
+    line-height: 30px;
+  }
+  .cart-item h2 {
+    font-size: 1.8rem;
+  }
+  .price,
+  .size {
+    font-size: 1.5rem;
+  }
+  .amount {
+    padding: 0.3rem 0.7rem;
+    font-size: 1.3rem;
+  }
+}

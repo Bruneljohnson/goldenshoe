@@ -1,0 +1,243 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+  margin-top: 4rem;
+  background: var(--color-greyfooter);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.imgContainer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.imgContainer img {
+  border-radius: 0.5rem;
+  width: 100%;
+}
+.imgContainer img:hover {
+  transform: scale(1.1);
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+
+.infoContainer h1 {
+  margin-bottom: 1rem;
+}
+
+.infoContainer > p {
+  color: var(--color-red);
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+}
+
+.infoContainer > span {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.imgsContainer {
+  margin-top: 5rem;
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.imagesSet {
+  width: 100%;
+}
+.imagesSet img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.imagesSet img:hover {
+  transform: scale(1.1);
+}
+
+.moreInfo {
+  padding: 5rem;
+  font-size: 1.4rem !important;
+  text-align: center;
+  color: var(--color-black) !important;
+}
+
+.chooseSize {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.chooseSize h1 {
+  margin: 0;
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.chooseSize select {
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.chooseSize select:hover {
+  color: var(--color-red);
+}
+
+.addContainer {
+  margin-top: 3rem;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addContainer button {
+  background: var(--color-greybase);
+}
+.addContainer button:hover {
+  background: var(--color-red);
+}
+
+.amountContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+  margin-right: 2rem;
+  font-weight: 700;
+}
+
+.amountContainer svg {
+  cursor: pointer;
+}
+.amountContainer svg:hover {
+  color: var(--color-red);
+}
+
+.form__input {
+  display: block;
+  font-family: inherit;
+  font-size: 1.6rem;
+  color: var(--color-black);
+  padding: 1.25rem 1.75rem;
+  border: none;
+  width: 100%;
+  background-color: #fff;
+  background-color: #f2f2f2;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* Pseudo element (a visible thing that isn't really in the DOM).
+      Also needs -ms- */
+}
+
+.form__input:focus {
+  outline: none;
+  border-bottom: 3px solid var(--color-red);
+}
+.form__input:focus:invalid {
+  border-bottom: 3px solid var(--color-yellow);
+}
+.form__input::-webkit-input-placeholder {
+  color: #bbb;
+}
+
+.form__group:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.form__group button:disabled,
+.form__group button:disabled:hover,
+.form__group button:disabled:active {
+  cursor: not-allowed;
+  background-color: var(--color-greybase);
+  color: #3f3f3f;
+  border-color: var(--color-greybase);
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .imgsContainer {
+    grid-row: 3/4;
+    grid-column: 1/-1;
+  }
+  .infoContainer h1 {
+    margin-top: 5rem;
+  }
+  .chooseSize h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    margin-top: 0;
+  }
+
+  .chooseSize select {
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width: 650px) {
+  .infoContainer button {
+    width: 40%;
+  }
+  .infoContainer > p {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .moreInfo {
+    padding: 2rem;
+  }
+  .infoContainer h1 {
+    font-size: 3rem;
+  }
+  .chooseSize h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 350px) {
+  .moreInfo {
+    font-size: 1rem !important;
+  }
+  .addContainer {
+    margin-top: 3rem;
+    width: 70%;
+  }
+}
