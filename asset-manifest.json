@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/goldenshoe/static/css/main.27528308.css",
+    "main.js": "/goldenshoe/static/js/main.fa7d0b87.js",
+    "static/media/Header-3.jpg": "/goldenshoe/static/media/Header-3.c23680e5d03e1cf076a5.jpg",
+    "static/media/Header-2.jpg": "/goldenshoe/static/media/Header-2.82a60eb601d1afea3014.jpg",
+    "static/media/Header-1.jpg": "/goldenshoe/static/media/Header-1.70cbaedfa61755d2e6ad.jpg",
+    "static/media/Header-4.jpg": "/goldenshoe/static/media/Header-4.c853a11db9df7ded092f.jpg",
+    "static/media/construction.png": "/goldenshoe/static/media/construction.3da7d148368adfbd2cf6.png",
+    "static/media/goldenShoe.png": "/goldenshoe/static/media/goldenShoe.c470f6a6a56cac8b47f6.png",
+    "static/media/BlackConv-sideL.jpeg": "/goldenshoe/static/media/BlackConv-sideL.a5d8cabee2ba12e3a45d.jpeg",
+    "index.html": "/goldenshoe/index.html",
+    "main.27528308.css.map": "/goldenshoe/static/css/main.27528308.css.map",
+    "main.fa7d0b87.js.map": "/goldenshoe/static/js/main.fa7d0b87.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.27528308.css",
+    "static/js/main.fa7d0b87.js"
+  ]
+}
