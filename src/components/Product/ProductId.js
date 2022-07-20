@@ -30,6 +30,10 @@ const ProductId = () => {
   const selectedSizeQuantity =
     shoe?.sizes.find((size) => selected === size.size)?.quantity ?? 0;
 
+  const selectedSizeSoldOut = shoe?.sizes.find(
+    (size) => selected === size.size && size.quantity === 0
+  );
+
   const amountHandler = (event) => {
     event.preventDefault();
 
@@ -117,6 +121,9 @@ const ProductId = () => {
               Add
             </button>
           </div>
+          {selectedSizeSoldOut && (
+            <p className={classes.soldout}>Size Sold Out</p>
+          )}
           <p className={classes.moreInfo}> {moreInfo}</p>
         </div>
         <div className={classes.imgsContainer}>

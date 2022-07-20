@@ -71,7 +71,7 @@
 }
 
 .moreInfo {
-  padding: 5rem;
+  padding: 3rem 6rem;
   font-size: 1.4rem !important;
   text-align: center;
   color: var(--color-black) !important;
@@ -191,6 +191,13 @@
   border-color: var(--color-greybase);
 }
 
+.soldout {
+  font-size: 1.7rem !important;
+  margin: 1.5rem auto;
+  font-weight: 700 !important;
+  text-align: center;
+}
+
 @media screen and (max-width: 850px) {
   .container {
     display: grid;
@@ -230,6 +237,7 @@
 }
 @media screen and (max-width: 450px) {
   .moreInfo {
+    margin-top: 1rem;
     padding: 2rem;
   }
   .infoContainer h1 {
