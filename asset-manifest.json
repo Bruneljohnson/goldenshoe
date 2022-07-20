@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/goldenshoe/static/css/main.855e3223.css",
-    "main.js": "/goldenshoe/static/js/main.89d2984e.js",
+    "main.js": "/goldenshoe/static/js/main.184681af.js",
     "static/css/274.42c4772b.chunk.css": "/goldenshoe/static/css/274.42c4772b.chunk.css",
     "static/js/274.e59754b8.chunk.js": "/goldenshoe/static/js/274.e59754b8.chunk.js",
     "static/css/479.f27a13b1.chunk.css": "/goldenshoe/static/css/479.f27a13b1.chunk.css",
@@ -16,8 +16,8 @@
     "static/js/226.9852b0d1.chunk.js": "/goldenshoe/static/js/226.9852b0d1.chunk.js",
     "static/css/877.bfb44ab1.chunk.css": "/goldenshoe/static/css/877.bfb44ab1.chunk.css",
     "static/js/877.ff150717.chunk.js": "/goldenshoe/static/js/877.ff150717.chunk.js",
-    "static/css/261.c42d1f0e.chunk.css": "/goldenshoe/static/css/261.c42d1f0e.chunk.css",
-    "static/js/261.22e1a14e.chunk.js": "/goldenshoe/static/js/261.22e1a14e.chunk.js",
+    "static/css/261.41da6826.chunk.css": "/goldenshoe/static/css/261.41da6826.chunk.css",
+    "static/js/261.c49944c4.chunk.js": "/goldenshoe/static/js/261.c49944c4.chunk.js",
     "static/js/48.0a9e6c48.chunk.js": "/goldenshoe/static/js/48.0a9e6c48.chunk.js",
     "static/js/578.a3a64697.chunk.js": "/goldenshoe/static/js/578.a3a64697.chunk.js",
     "static/media/Header-3.jpg": "/goldenshoe/static/media/Header-3.c23680e5d03e1cf076a5.jpg",
@@ -29,7 +29,7 @@
     "static/media/BlackConv-sideL.jpeg": "/goldenshoe/static/media/BlackConv-sideL.a5d8cabee2ba12e3a45d.jpeg",
     "index.html": "/goldenshoe/index.html",
     "main.855e3223.css.map": "/goldenshoe/static/css/main.855e3223.css.map",
-    "main.89d2984e.js.map": "/goldenshoe/static/js/main.89d2984e.js.map",
+    "main.184681af.js.map": "/goldenshoe/static/js/main.184681af.js.map",
     "274.42c4772b.chunk.css.map": "/goldenshoe/static/css/274.42c4772b.chunk.css.map",
     "274.e59754b8.chunk.js.map": "/goldenshoe/static/js/274.e59754b8.chunk.js.map",
     "479.f27a13b1.chunk.css.map": "/goldenshoe/static/css/479.f27a13b1.chunk.css.map",
@@ -44,13 +44,13 @@
     "226.9852b0d1.chunk.js.map": "/goldenshoe/static/js/226.9852b0d1.chunk.js.map",
     "877.bfb44ab1.chunk.css.map": "/goldenshoe/static/css/877.bfb44ab1.chunk.css.map",
     "877.ff150717.chunk.js.map": "/goldenshoe/static/js/877.ff150717.chunk.js.map",
-    "261.c42d1f0e.chunk.css.map": "/goldenshoe/static/css/261.c42d1f0e.chunk.css.map",
-    "261.22e1a14e.chunk.js.map": "/goldenshoe/static/js/261.22e1a14e.chunk.js.map",
+    "261.41da6826.chunk.css.map": "/goldenshoe/static/css/261.41da6826.chunk.css.map",
+    "261.c49944c4.chunk.js.map": "/goldenshoe/static/js/261.c49944c4.chunk.js.map",
     "48.0a9e6c48.chunk.js.map": "/goldenshoe/static/js/48.0a9e6c48.chunk.js.map",
     "578.a3a64697.chunk.js.map": "/goldenshoe/static/js/578.a3a64697.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.855e3223.css",
-    "static/js/main.89d2984e.js"
+    "static/js/main.184681af.js"
   ]
 }
